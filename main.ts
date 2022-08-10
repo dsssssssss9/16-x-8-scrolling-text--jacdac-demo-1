@@ -1,11 +1,20 @@
 modules.button1.onEvent(jacdac.ButtonEvent.Down, function () {
+    Encoder = modules.rotaryEncoder1.position()
     matrix.clear()
     matrix.show()
     matrix.scrollText(
-    "Button 1 ",
+    "" + convertToText(Encoder) + " ",
     24,
     0,
-    neopixel.colors(NeoPixelColors.Red)
+    neopixel.colors(NeoPixelColors.Green)
+    )
+})
+myModules.button3.onEvent(jacdac.ButtonEvent.Down, function () {
+    matrix.scrollText(
+    "Button 3 ",
+    64,
+    0,
+    neopixel.colors(NeoPixelColors.Purple)
     )
 })
 input.onButtonPressed(Button.A, function () {
@@ -17,17 +26,17 @@ input.onButtonPressed(Button.A, function () {
     )
 })
 modules.button2.onEvent(jacdac.ButtonEvent.Down, function () {
-    matrix.clear()
-    matrix.show()
     matrix.scrollText(
-    "Button 2",
+    "Button 2 ",
     24,
     0,
-    neopixel.colors(NeoPixelColors.Green)
+    neopixel.colors(NeoPixelColors.Red)
     )
 })
 let matrix: SmartMatrix.Matrix = null
+let Encoder = 0
 basic.showIcon(IconNames.Umbrella)
+Encoder = 0
 matrix = SmartMatrix.create(
 DigitalPin.P2,
 32,
