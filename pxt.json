@@ -1,0 +1,27 @@
+{
+    "name": "16 x 8 Scrolling text + Jacdac Demo 1",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "pxt-smartmatrix": "github:Shorts1999/pxt-smartmatrix#v1.0.5",
+        "jacdac": "github:microsoft/pxt-jacdac#v1.8.20"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "5.0.12",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
