@@ -6,7 +6,8 @@
         "radio": "*",
         "microphone": "*",
         "pxt-smartmatrix": "github:Shorts1999/pxt-smartmatrix#v1.0.5",
-        "jacdac": "github:microsoft/pxt-jacdac#v1.8.20"
+        "jacdac": "github:microsoft/pxt-jacdac#v1.8.20",
+        "jacdac-button": "github:microsoft/pxt-jacdac/button#v1.8.20"
     },
     "files": [
         "main.blocks",

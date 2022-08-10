@@ -1,9 +1,29 @@
+modules.button1.onEvent(jacdac.ButtonEvent.Down, function () {
+    matrix.clear()
+    matrix.show()
+    matrix.scrollText(
+    "Button 1 ",
+    24,
+    0,
+    neopixel.colors(NeoPixelColors.Red)
+    )
+})
 input.onButtonPressed(Button.A, function () {
     matrix.scrollText(
-    "Framk",
+    "Frank",
     24,
     0,
     neopixel.colors(NeoPixelColors.Blue)
+    )
+})
+modules.button2.onEvent(jacdac.ButtonEvent.Down, function () {
+    matrix.clear()
+    matrix.show()
+    matrix.scrollText(
+    "Button 2",
+    24,
+    0,
+    neopixel.colors(NeoPixelColors.Green)
     )
 })
 let matrix: SmartMatrix.Matrix = null
