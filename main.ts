@@ -29,14 +29,6 @@ modules.button1.onEvent(jacdac.ButtonEvent.Down, function () {
     neopixel.colors(NeoPixelColors.Green)
     )
 })
-myModules.button3.onEvent(jacdac.ButtonEvent.Down, function () {
-    matrix.scrollText(
-    "Button 3 ",
-    64,
-    0,
-    neopixel.colors(NeoPixelColors.Purple)
-    )
-})
 input.onButtonPressed(Button.A, function () {
     matrix.scrollText(
     "Frank Rules O.K.!!! ",
