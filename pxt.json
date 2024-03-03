@@ -1,5 +1,5 @@
 {
-    "name": "32 x 8 Scrolling text + Jacdac Demo 1",
+    "name": "32 x 8 Scrolling text + Jacdac Demo 1 #2",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -22,7 +22,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "5.0.12",
+        "target": "6.0.25",
         "targetId": "microbit"
     },
     "supportedTargets": [

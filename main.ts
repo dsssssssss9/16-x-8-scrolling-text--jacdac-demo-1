@@ -21,31 +21,22 @@
  * 
  * You can also press A on Micro:Bit to display a message
  */
+modules.button1.onEvent(jacdac.ButtonEvent.Down, function () {
+    matrix.clear()
+    matrix.show()
+    matrix.scrollText(
+    "Button 1 Pressed",
+    24,
+    0,
+    neopixel.colors(NeoPixelColors.Green)
+    )
+})
 myModules.button3.onEvent(jacdac.ButtonEvent.Down, function () {
     matrix.scrollText(
     "Button 3 ",
     64,
     0,
     neopixel.colors(NeoPixelColors.Purple)
-    )
-})
-modules.button1.onEvent(jacdac.ButtonEvent.Down, function () {
-    Encoder = modules.rotaryEncoder1.position()
-    matrix.clear()
-    matrix.show()
-    matrix.scrollText(
-    "" + convertToText(Encoder) + " ",
-    24,
-    0,
-    neopixel.colors(NeoPixelColors.Green)
-    )
-})
-modules.button2.onEvent(jacdac.ButtonEvent.Down, function () {
-    matrix.scrollText(
-    "Button 2 ",
-    24,
-    0,
-    neopixel.colors(NeoPixelColors.Red)
     )
 })
 input.onButtonPressed(Button.A, function () {
@@ -56,11 +47,16 @@ input.onButtonPressed(Button.A, function () {
     neopixel.colors(NeoPixelColors.Blue)
     )
 })
+modules.button2.onEvent(jacdac.ButtonEvent.Down, function () {
+    matrix.scrollText(
+    "Button 2  Pressed",
+    24,
+    0,
+    neopixel.colors(NeoPixelColors.Red)
+    )
+})
 let matrix: SmartMatrix.Matrix = null
-let Encoder = 0
 basic.showIcon(IconNames.Umbrella)
-Encoder = 0
-Encoder = modules.rotaryEncoder1.position()
 matrix = SmartMatrix.create(
 DigitalPin.P2,
 32,
