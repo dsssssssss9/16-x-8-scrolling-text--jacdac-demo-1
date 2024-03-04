@@ -20,16 +20,18 @@
 // 
 // You can also press A on Micro:Bit to display a message
 modules.button1.onEvent(jacdac.ButtonEvent.Down, function () {
+    basic.showNumber(1)
     matrix.clear()
     matrix.show()
     matrix.scrollText(
-    "Button 1 Pressed",
+    "Button 1 Pressed     ",
     24,
     0,
     neopixel.colors(NeoPixelColors.Green)
     )
 })
 input.onButtonPressed(Button.A, function () {
+    basic.showIcon(IconNames.Heart)
     matrix.scrollText(
     "Frank Rules O.K.!!! ",
     24,
@@ -38,15 +40,16 @@ input.onButtonPressed(Button.A, function () {
     )
 })
 modules.button2.onEvent(jacdac.ButtonEvent.Down, function () {
+    basic.showNumber(2)
     matrix.scrollText(
-    "Button 2  Pressed",
+    "Button 2  Pressed     ",
     24,
     0,
     neopixel.colors(NeoPixelColors.Red)
     )
 })
 let matrix: SmartMatrix.Matrix = null
-basic.showIcon(IconNames.Umbrella)
+basic.showIcon(IconNames.Yes)
 matrix = SmartMatrix.create(
 DigitalPin.P2,
 32,
